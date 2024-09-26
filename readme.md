@@ -2,15 +2,11 @@ Here's the fixed markdown for your comments app:
 
 # Comments App
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/your-repo)](https://github.com/yourusername/your-repo/commits/main)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/your-repo)](https://github.com/yourusername/your-repo/issues)
-[![GitHub license](https://img.shields.io/github/license/yourusername/your-repo)](https://github.com/yourusername/your-repo/blob/main/LICENSE)
-
 A simple React application for adding and deleting comments using Redux Toolkit and Material UI.
 
 ## 🚀 Demo
 
-[View Demo](https://your-deployed-app-url.com)
+[View Demo](https://dimahike.github.io/vite-react-comments/)
 
 ## 📝 Description
 
@@ -31,13 +27,13 @@ This application allows users to view a list of comments, add new comments, and 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/dimahike/vite-react-comments.git
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd your-repo
+   cd vite-react-comments
    ```
 
 3. **Install dependencies:**
@@ -93,7 +89,7 @@ This project is licensed under the [MIT License](https://github.com/yourusername
 
 ## 📷 Screenshots
 
-Add screenshots or GIFs showcasing your application here.
+<img width="1666" alt="Снимок экрана 2024-09-26 в 17 04 20" src="https://github.com/user-attachments/assets/c6e91fd4-b72f-45ce-bdd0-6ed07ceb2bfe">
 
 ## 📧 Contact
 
