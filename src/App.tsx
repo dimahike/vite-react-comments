@@ -21,7 +21,7 @@ const theme = createTheme({
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router basename="/vite-react-comments/">
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
