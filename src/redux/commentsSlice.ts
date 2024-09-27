@@ -4,11 +4,10 @@ import { initialComments } from '../data/comments';
 
 import { Comment, CommentsState } from '@/types';
 
-const storedComments = localStorage.getItem('comments');
 const initialState: CommentsState = {
   username: '',
   body: '',
-  comments: storedComments ? JSON.parse(storedComments) : initialComments,
+  comments: initialComments,
 };
 
 const commentsSlice = createSlice({
@@ -24,8 +23,6 @@ const commentsSlice = createSlice({
     },
     addComment: (state, action: PayloadAction<Comment>) => {
       state.comments.unshift(action.payload);
-
-      // localStorage.setItem('comments', JSON.stringify(state.comments));
     },
     deleteComment: (state, action: PayloadAction<number>) => {
       state.comments = state.comments.filter(
