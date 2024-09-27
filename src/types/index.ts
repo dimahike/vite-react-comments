@@ -9,5 +9,7 @@ export interface Comment {
 }
 
 export interface CommentsState {
+  username: string;
+  body: string;
   comments: Comment[];
 }

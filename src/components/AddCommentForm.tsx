@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, Alert } from '@mui/material';
 
-import { useAppDispatch } from '../redux/hooks';
-import { addComment } from '../redux/commentsSlice';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { addComment, setBody, setUsername } from '../redux/commentsSlice';
 
 const AddCommentForm: React.FC = () => {
   const dispatch = useAppDispatch();
-  const [username, setUsername] = useState('');
-  const [text, setText] = useState('');
   const [error, setError] = useState('');
 
+  const username = useAppSelector((state) => state.comments.username);
+  const text = useAppSelector((state) => state.comments.body);
+
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
+    dispatch(setBody(e.target.value));
   };
 
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(e.target.value);
+    dispatch(setUsername(e.target.value));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,9 +40,8 @@ const AddCommentForm: React.FC = () => {
     };
 
     dispatch(addComment(newComment));
-
-    setUsername('');
-    setText('');
+    dispatch(setUsername(''));
+    dispatch(setBody(''));
   };
 
   return (
